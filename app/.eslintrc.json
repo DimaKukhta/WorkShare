@@ -1,62 +1,55 @@
 {
-  "root": true,
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
-  },
-  "extends": [
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:prettier/recommended",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/eslint-recommended",
-    "prettier"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": 12,
-    "sourceType": "module",
-    "requireConfigFile": false,
-    "babelOptions": {
-      "presets": [
-        "@babel/preset-react",
-        "@babel/preset-typescript"
-      ]
+    "root": true,
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
     },
-    "ecmaFeatures": {
-      "jsx": true
+    "extends": [
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:prettier/recommended",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "requireConfigFile": false,
+        "babelOptions": {
+            "presets": ["@babel/preset-react", "@babel/preset-typescript"]
+        },
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "plugins": ["react", "prettier", "@typescript-eslint"],
+    "rules": {
+        "react/prop-types": "off",
+        "react-hooks/rules-of-hooks": 0,
+        "react/display-name": "warn",
+        "react/no-unescaped-entities": "warn",
+        "react/jsx-key": "warn",
+        "no-debugger": "warn",
+        "no-console": ["warn", { "allow": ["warn", "error", "info", "debug"] }],
+        "react-hooks/exhaustive-deps": "off",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["warn"],
+        "@typescript-eslint/no-empty-function": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ]
     }
-  },
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
-  "plugins": [
-    "react",
-    "prettier",
-    "@typescript-eslint"
-  ],
-  "rules": {
-    "react/prop-types": "off",
-    "react-hooks/rules-of-hooks": 0,
-    "react/display-name": "warn",
-    "react/no-unescaped-entities": "warn",
-    "react/jsx-key": "warn",
-    "no-debugger": "warn",
-    "no-console": ["warn", { "allow": ["warn", "error", "info", "debug"] }],
-    "react-hooks/exhaustive-deps": "off",
-    "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["warn"],
-    "@typescript-eslint/no-empty-function": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
-    ]
-  }
 }
