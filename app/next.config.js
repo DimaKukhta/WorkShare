@@ -7,8 +7,7 @@ const nextConfig = {
 };
 module.exports = withFonts({
   ...nextConfig,
-  enableSvg: true,
-  webpack(config, options) {
+  webpack(config) {
     return config;
   },
 });

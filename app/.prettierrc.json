@@ -4,5 +4,10 @@
   "semi": true,
   "tabWidth": 2,
   "bracketSameLine": true,
-  "jsxSingleQuote": true
+  "bracketSpacing": true,
+  "jsxSingleQuote": true,
+  "printWidth": 120,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "singleAttributePerLine": true
 }

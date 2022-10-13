@@ -1,10 +1,5 @@
 import { grey } from '@mui/material/colors';
-import {
-  Palette,
-  PaletteOptions,
-  TypeBackground,
-  TypeText,
-} from '@mui/material/styles/createPalette';
+import { Palette, PaletteOptions, TypeBackground, TypeText } from '@mui/material/styles/createPalette';
 
 declare module '@mui/material/styles/createPalette' {
   interface Palette {
