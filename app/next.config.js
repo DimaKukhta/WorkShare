@@ -1,13 +1,13 @@
 /** @type {import('next').NextConfig} */
 const withFonts = require('next-fonts');
 
-module.exports = withFonts({
-  enableSvg: true,
-  webpack(config, options) {
-    return config;
-  },
-});
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
 };
+module.exports = withFonts({
+  ...nextConfig,
+  webpack(config) {
+    return config;
+  },
+});
