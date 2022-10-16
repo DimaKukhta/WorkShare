@@ -2,10 +2,10 @@ import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { Button, Typography } from '@mui/material';
-import theme from '../src/styles/theme';
 
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { isLoggedInSelector, login, logout } from '../store/reducers/auth/authSlice';
+import Layout from '../src/components/layout/Layout';
 
 const Home: NextPage = () => {
   const isAuth = useAppSelector(isLoggedInSelector);
@@ -23,18 +23,16 @@ const Home: NextPage = () => {
           href='/favicon.ico'
         />
       </Head>
-
-      <main>
-        <Typography style={{ margin: theme.spacing(6) }}>
-          {isAuth ? 'You was logged in' : 'You was logged out'}
-        </Typography>
-        <Button
-          style={{ margin: theme.spacing(6) }}
-          variant='outlined'
-          onClick={() => (isAuth ? dispatch(logout()) : dispatch(login()))}>
-          {isAuth ? 'Logout' : 'LogIn'}
-        </Button>
-      </main>
+      <Layout>
+        <main>
+          <Typography pt={4}>{isAuth ? 'You was logged in' : 'You was logged out'}</Typography>
+          <Button
+            variant='outlined'
+            onClick={() => (isAuth ? dispatch(logout()) : dispatch(login()))}>
+            {isAuth ? 'Logout' : 'LogIn'}
+          </Button>
+        </main>
+      </Layout>
     </div>
   );
 };

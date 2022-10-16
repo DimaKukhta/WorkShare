@@ -15,18 +15,6 @@ const theme = {
     MuiCssBaseline: {
       styleOverrides: fonts,
     },
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          color: palette.secondary.main,
-          borderColor: palette.primary.light,
-          padding: '2.5rem',
-          '&$error': {
-            color: palette.primary.main,
-          },
-        },
-      },
-    },
   },
 };
 
