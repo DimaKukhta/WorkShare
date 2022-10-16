@@ -35,7 +35,6 @@
   "plugins": ["react", "prettier", "@typescript-eslint"],
   "rules": {
     "react/prop-types": "off",
-    "react-hooks/rules-of-hooks": 1,
     "react/display-name": "warn",
     "react/no-unescaped-entities": "warn",
     "react/jsx-key": "warn",

@@ -16,19 +16,16 @@ export default {
   useNextVariants: true,
   fontFamily: ['Mulish', 'sans-serif'].join(','),
   h1: {
-    fontFamily: 'Coolvetica, sans-serif',
     fontSize: '1.875rem',
     lineHeight: '2.25rem',
     fontWeight: 400,
   },
   h2: {
-    fontFamily: 'Coolvetica, sans-serif',
     fontSize: '1.5rem',
     lineHeight: '1.8125rem',
     fontWeight: 400,
   },
   h3: {
-    fontFamily: 'Coolvetica, sans-serif',
     fontSize: '1rem',
     lineHeight: '1.1875rem',
     fontWeight: 400,

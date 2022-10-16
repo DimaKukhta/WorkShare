@@ -1,0 +1,32 @@
+.mainContainer {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.heroWrapper {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+}
+.heroContent {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+}
+.heroMotto {
+  display: flex;
+  padding-top: 5rem;
+  align-items: center;
+  color: honeydew;
+}

@@ -1,6 +1,6 @@
-import MulishBold from '../assets/fonts/Mulish-Bold.ttf';
-import MulishMedium from '../assets/fonts/Mulish-Medium.ttf';
-import MulishRegular from '../assets/fonts/Mulish-Regular.ttf';
+import MulishBold from '../../assets/fonts/Mulish-Bold.ttf';
+import MulishMedium from '../../assets/fonts/Mulish-Medium.ttf';
+import MulishRegular from '../../assets/fonts/Mulish-Regular.ttf';
 
 export default `
  @font-face {
