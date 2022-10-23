@@ -5,7 +5,7 @@ import { Button, Typography } from '@mui/material';
 
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { isLoggedInSelector, login, logout } from '../store/reducers/auth/authSlice';
-import Layout from '../src/components/layout/Layout';
+import Layout from '../layouts/Layout';
 
 const Home: NextPage = () => {
   const isAuth = useAppSelector(isLoggedInSelector);
@@ -25,7 +25,12 @@ const Home: NextPage = () => {
       </Head>
       <Layout>
         <main>
-          <Typography pt={4}>{isAuth ? 'You was logged in' : 'You was logged out'}</Typography>
+          <p className='text-3xl font-bold underline'>Text</p>
+          <Typography
+            pt={4}
+            className='text-3xl font-bold underline'>
+            {isAuth ? 'You was logged in' : 'You was logged out'}
+          </Typography>
           <Button
             variant='outlined'
             onClick={() => (isAuth ? dispatch(logout()) : dispatch(login()))}>

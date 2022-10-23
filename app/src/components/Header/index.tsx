@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import styles from './header.module.css';
+import styles from './index.module.scss';
 import logo from '../../../public/Logo.svg';
 
 import { deepOrange } from '@mui/material/colors';

@@ -1,0 +1,26 @@
+.loginContentContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    .label {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: left;
+    }
+    .inputsContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 15px;
+    }
+    .buttonsContainer {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        row-gap: 10px;
+    }
+}
