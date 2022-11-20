@@ -5,17 +5,3 @@
     min-height: 100vh;
     background-color: #F2F2F2;
 }
-.window {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    min-width: 320px;
-    border-radius: 5%;
-    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
-    -o-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
-    -ms-box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
-    background-color: rgb(255,255,255);
-}

@@ -1,4 +1,4 @@
-.loginContentContainer {
+.authContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,8 +15,8 @@
         width: 100%;
         row-gap: 15px;
     }
-    .buttonsContainer {
-        margin-top: 15px;
+    .buttonContainer {
+        margin-top: 20px;
         display: flex;
         align-items: center;
         flex-direction: column;

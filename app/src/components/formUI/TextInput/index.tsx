@@ -2,9 +2,10 @@ import React from 'react';
 import { Controller, Control } from 'react-hook-form';
 import { TextField, TextFieldProps } from '@mui/material';
 
-type ITextInputProps = TextFieldProps & {
+export type ITextInputProps = TextFieldProps & {
   name: string;
-  control: any;
+  control: any; // Control;
+  props?: TextFieldProps;
 };
 
 function TextInput({ name, control, ...props }: ITextInputProps) {

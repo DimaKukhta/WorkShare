@@ -15,6 +15,23 @@ const theme = {
     MuiCssBaseline: {
       styleOverrides: fonts,
     },
+    MuiInputBase: {
+      styleOverrides: {
+        root: {
+          '& .MuiInputBase-input': {
+            padding: '12px 14px',
+          },
+          '& .MuiOutlinedInput-notchedOutline': {},
+        },
+      },
+    },
+    MuiInputLabel: {
+      styleOverrides: {
+        root: {
+          top: '-3px',
+        },
+      },
+    },
   },
 };
 

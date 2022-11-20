@@ -10,29 +10,41 @@ import TextInput from '../../components/formUI/TextInput';
 import yup from '../../utils/yup';
 import AuthWindow from '../../components/AuthWindow';
 
-interface ILoginFormInput {
+interface IRegistrationFormInput {
+  firstName: string;
+  lastName: string;
+  phoneNumber: string;
   email: string;
   password: string;
+  confirmPassword: string;
 }
 
 const schema = yup
   .object({
+    firstName: yup.string().required('First name is a required field'),
+    lastName: yup.string().required('Second name is a required field'),
+    phoneNumber: yup.string().required('Phone number is a required field'),
     email: yup.string().email('Email must be valid email type').required('Email is a required field'),
     password: yup.string().required('Password is a required field').min(8, 'Password min length is 8 symbols'),
+    confirmPassword: yup.string().oneOf([yup.ref('password'), null], 'Passwords must match'),
   })
   .required();
 
-const Login: NextPage = () => {
+const Registration: NextPage = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const { control, handleSubmit } = useForm<ILoginFormInput>({
+  const { control, handleSubmit } = useForm<IRegistrationFormInput>({
     resolver: yupResolver(schema),
     defaultValues: {
+      firstName: '',
+      lastName: '',
+      phoneNumber: '',
       email: '',
       password: '',
+      confirmPassword: '',
     },
   });
 
-  const onSubmit: SubmitHandler<ILoginFormInput> = (data) => {
+  const onSubmit: SubmitHandler<IRegistrationFormInput> = (data) => {
     console.log(data);
     setIsLoading(true);
     setTimeout(() => {
@@ -42,11 +54,32 @@ const Login: NextPage = () => {
 
   return (
     <AuthLayout>
-      <AuthWindow isLogin>
+      <AuthWindow>
         <form
           className={styles.authContainer}
           onSubmit={handleSubmit(onSubmit)}>
           <div className={styles.inputsContainer}>
+            <TextInput
+              control={control}
+              name='firstName'
+              label='First Name'
+              fullWidth={true}
+              placeholder='Please enter your first name'
+            />
+            <TextInput
+              control={control}
+              name='lastName'
+              label='Last Name'
+              fullWidth={true}
+              placeholder='Please enter your second name'
+            />
+            <TextInput
+              control={control}
+              name='phoneNumber'
+              label='Phone number'
+              fullWidth={true}
+              placeholder='Please enter your phone number'
+            />
             <TextInput
               control={control}
               name='email'
@@ -62,14 +95,22 @@ const Login: NextPage = () => {
               type='password'
               placeholder='Please enter your password'
             />
+            <TextInput
+              control={control}
+              name='confirmPassword'
+              label='Confirm password'
+              fullWidth={true}
+              type='password'
+              placeholder='Please enter your password again'
+            />
           </div>
           <div className={styles.buttonContainer}>
             <LoadingButton
+              variant='contained'
               loading={isLoading}
               fullWidth={true}
-              type='submit'
-              variant='contained'>
-              Login
+              type='submit'>
+              Create a new account
             </LoadingButton>
           </div>
         </form>
@@ -78,4 +119,4 @@ const Login: NextPage = () => {
   );
 };
 
-export default Login;
+export default Registration;
