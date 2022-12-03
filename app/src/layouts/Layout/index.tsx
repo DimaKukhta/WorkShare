@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 
-import styles from './layout.module.css';
+import styles from './index.module.scss';
 import heroPic from '../../../public/hero-page.jpg';
-import Header from './Header';
-import Footer from './Footer';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 import { Typography } from '@mui/material';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
