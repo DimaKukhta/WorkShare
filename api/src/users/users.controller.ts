@@ -32,11 +32,17 @@ export class UsersController {
   }
 
   @Get(':id')
-  async getOne(@Param('id') id: string) {}
+  async getOne(@Param('id') id: string) {
+    return;
+  }
 
   @Put(':id')
-  async update(@Param('id') id: string) {}
+  async update(@Param('id') id: string) {
+    return;
+  }
 
   @Delete(':id')
-  async remove(@Param('id') id: string) {}
+  async remove(@Param('id') id: string) {
+    return;
+  }
 }
